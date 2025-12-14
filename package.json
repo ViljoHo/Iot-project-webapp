@@ -18,7 +18,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
     "dev": "ts-node-dev index.ts",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "build:frontend": "cd frontend && npm install && npm run build",
+    "build:backend": "tsc",
+    "build": "npm run build:frontend && npm run build:backend"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
